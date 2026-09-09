@@ -1,22 +1,23 @@
 @font-face {
   font-family: Trip;
-  src: url("../assest/font/TripSans-Regular.eot") format("eot"),
+  src:
+    url("../assest/font/TripSans-Regular.eot") format("eot"),
     url("../assest/font/TripSans-Regular.ttf") format("ttf"),
     url("../assest/font/TripSans-Regular.woff") format("woff"),
     url("../assest/font/TripSans-Regular.woff2") format("woff2");
 }
 
 :root {
-  --color-bg: #FAF7F2;
-  --color-ink: #0E2A2C;
-  --color-ink-soft: #3A5254;
-  --color-gold: #B8924A;
-  --color-gold-soft: #DCC793;
-  --color-teal-deep: #0E2A2C;
-  --color-teal-mid: #1B4B47;
-  --color-white: #FFFFFF;
+  --color-bg: #faf7f2;
+  --color-ink: #0e2a2c;
+  --color-ink-soft: #3a5254;
+  --color-gold: #b8924a;
+  --color-gold-soft: #dcc793;
+  --color-teal-deep: #0e2a2c;
+  --color-teal-mid: #1b4b47;
+  --color-white: #ffffff;
 
-  --font-base: 'Trip', sans-serif;
+  --font-base: "Trip", sans-serif;
 
   --header-height: 84px;
   --container-width: 1180px;
@@ -86,7 +87,11 @@ img {
   border-radius: var(--radius-sm);
   font-size: 15px;
   font-weight: 600;
-  transition: background var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+  transition:
+    background var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-base);
   white-space: nowrap;
 }
 
@@ -112,12 +117,12 @@ img {
 
 .btn-ghost {
   color: var(--color-white);
-  border: 1.5px solid rgba(255,255,255,0.55);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
 }
 
 .btn-ghost:hover {
   border-color: var(--color-white);
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ===================================================
@@ -129,17 +134,20 @@ img {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   height: var(--header-height);
   display: flex;
   align-items: center;
-  transition: background var(--transition-base), box-shadow var(--transition-base), height var(--transition-base);
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base),
+    height var(--transition-base);
 }
 
 .site-header.scrolled {
-  background: rgba(250, 247, 242, 0.92);
+  background: rgba(218, 218, 218, 0.92);
   backdrop-filter: blur(8px);
-  box-shadow: 0 1px 0 rgba(14,42,44,0.08);
+  box-shadow: 0 1px 0 rgba(14, 42, 44, 0.08);
   height: 72px;
 }
 
@@ -154,8 +162,9 @@ img {
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: bolder;
+  letter-spacing: -40px;
   color: var(--color-white);
   transition: color var(--transition-base);
 }
@@ -164,9 +173,42 @@ img {
   color: var(--color-ink);
 }
 
-.logo span {
-  color: var(--color-gold-soft);
+.logo {
+  position: relative;
+  display: block;
+  width: 135px;
+  height: 70px;
 }
+
+.logo-hotel {
+  position: absolute;
+  top: 24px;
+  right: 0;
+
+  z-index: 1;
+
+  color: var(--color-white);
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -5px;
+}
+
+.logo-sahab {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+
+  z-index: 2;
+
+  color: var(--color-gold-soft);
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: -6px;
+
+  transform: rotate(-3deg);
+}
+
+
 
 .site-header.scrolled .logo span {
   color: var(--color-gold);
@@ -180,7 +222,7 @@ img {
 .main-nav a {
   font-size: 15px;
   font-weight: 500;
-  color: rgba(255,255,255,0.88);
+  color: rgba(255, 255, 255, 0.88);
   position: relative;
   padding-bottom: 4px;
   transition: color var(--transition-base);
@@ -191,7 +233,7 @@ img {
 }
 
 .main-nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   bottom: 0;
@@ -221,7 +263,7 @@ img {
 
 .header-actions .btn-outline {
   color: var(--color-white);
-  border-color: rgba(255,255,255,0.6);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .header-actions .btn-outline:hover {
@@ -255,7 +297,10 @@ img {
   height: 2px;
   background: var(--color-white);
   border-radius: 2px;
-  transition: background var(--transition-base), transform var(--transition-base), opacity var(--transition-base);
+  transition:
+    background var(--transition-base),
+    transform var(--transition-base),
+    opacity var(--transition-base);
 }
 
 .site-header.scrolled .menu-toggle span {
@@ -292,16 +337,30 @@ img {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse 60% 50% at 85% 15%, rgba(184,146,74,0.25), transparent 60%),
-    linear-gradient(200deg, var(--color-teal-mid) 0%, var(--color-teal-deep) 55%, #081a1b 100%);
+    radial-gradient(
+      ellipse 60% 50% at 85% 15%,
+      rgba(184, 146, 74, 0.25),
+      transparent 60%
+    ),
+    linear-gradient(
+      200deg,
+      var(--color-teal-mid) 0%,
+      var(--color-teal-deep) 55%,
+      #081a1b 100%
+    );
 }
 
 .hero-bg::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    repeating-linear-gradient(120deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 90px);
+  background-image: repeating-linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.035) 0px,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 90px
+  );
 }
 
 .hero-content {
@@ -328,7 +387,7 @@ img {
 
 .hero-subtitle {
   font-size: 17px;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.78);
   max-width: 46ch;
   margin-bottom: 34px;
 }
@@ -350,7 +409,7 @@ img {
   margin: 0 auto;
   background: var(--color-white);
   border-radius: var(--radius-md);
-  box-shadow: 0 20px 50px rgba(14,42,44,0.18);
+  box-shadow: 0 20px 50px rgba(14, 42, 44, 0.18);
   padding: 22px 26px;
   display: flex;
   align-items: flex-end;
@@ -378,7 +437,7 @@ img {
   font-size: 15px;
   color: var(--color-ink);
   border: none;
-  border-bottom: 1.5px solid #E3DDD1;
+  border-bottom: 1.5px solid #e3ddd1;
   padding: 8px 2px;
   background: transparent;
   transition: border-color var(--transition-base);
@@ -409,7 +468,7 @@ img {
     background: var(--color-bg);
     padding: 12px 32px 24px;
     gap: 4px;
-    box-shadow: 0 12px 24px rgba(14,42,44,0.1);
+    box-shadow: 0 12px 24px rgba(14, 42, 44, 0.1);
     max-height: 0;
     overflow: hidden;
     transition: max-height var(--transition-base);

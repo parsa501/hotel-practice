@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>هتل ساحل‌نور</title>
+  </head>
+
+  <body>
+    <!-- ===== Header ===== -->
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a href="#" class="logo"> هتل <span>ساحل‌نور</span> </a>
+
+        <nav class="main-nav" id="mainNav">
+          <a href="#rooms">اتاق‌ها</a>
+          <a href="#amenities">امکانات</a>
+          <a href="#gallery">گالری</a>
+          <a href="#reviews">نظرات مهمان‌ها</a>
+          <a href="#contact">تماس</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#booking" class="btn btn-outline">رزرو اتاق</a>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="باز کردن منو"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">هتل پنج‌ستاره — سواحل جنوبی</p>
+
+        <h1 class="hero-title">
+          جایی که موج‌ها<br />
+          صدای بیدار شدن شما هستند
+        </h1>
+
+        <p class="hero-subtitle">
+          ۶۴ اتاق و سوییت رو‌به‌دریا، رستوران دریایی، و اسپایی که هرگز
+          نمی‌خواهید ترکش کنید.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#booking" class="btn btn-primary">رزرو اتاق</a>
+          <a href="#rooms" class="btn btn-ghost">مشاهده‌ی اتاق‌ها</a>
+        </div>
+      </div>
+
+      <!-- Floating booking widget -->
+      <div class="booking-widget" id="booking">
+        <div class="booking-field">
+          <label for="checkin">تاریخ ورود</label>
+          <input type="date" id="checkin" name="checkin" />
+        </div>
+
+        <div class="booking-field">
+          <label for="checkout">تاریخ خروج</label>
+          <input type="date" id="checkout" name="checkout" />
+        </div>
+
+        <div class="booking-field">
+          <label for="guests">تعداد مهمان</label>
+          <select id="guests" name="guests">
+            <option value="1">۱ نفر</option>
+            <option value="2" selected>۲ نفر</option>
+            <option value="3">۳ نفر</option>
+            <option value="4">۴ نفر</option>
+          </select>
+        </div>
+
+        <button
+          class="btn btn-primary booking-submit"
+          id="bookingSubmit"
+          type="button"
+        >
+          جستجوی اتاق
+        </button>
+      </div>
+    </section>
+
+    <!-- بخش‌های بعدی (اتاق‌ها، امکانات، گالری، نظرات، فرم تماس) در فازهای بعدی اضافه می‌شن -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

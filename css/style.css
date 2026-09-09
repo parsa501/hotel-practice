@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Trip;
+  src: url("/assest/font/TripSans-Regular.eot") format("eot"),
+    url("/assest/font/TripSans-Regular.ttf") format("ttf"),
+    url("/assest/font/TripSans-Regular.woff") format("woff"),
+    url("/assest/font/TripSans-Regular.woff2") format("woff2");
+}
+:root {
+  --paddingEl: 0 104px;
+  --transition: all 0.5s;
+  --font-weight: bold;
+  --text-decoration: underline;
+  --color-green: #34e0a1;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --background-color-gray: #f2f1ec;
+  --background-color-hover: #e0e0e0;
+  --color-banner: #301d49;
+  --gap: 16px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Trip;
+}
